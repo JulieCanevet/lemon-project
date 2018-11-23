@@ -1,0 +1,49 @@
+{# templates/user/new.html.twig #}
+{% extends 'layout.html.twig' %}
+    {% block content %}
+
+        <div class="main">
+            <div class="form-container">
+                <h2 class="form-title">Inscrivez-vous</h2>
+                {{ form_start(form) }}
+
+                <div class="input-block">
+                    {{ form_label(form.Name)}}
+                    {{ form_widget(form.Name)}}
+                </div>
+
+                <div class="input-block">
+                    {{ form_label(form.Firstname)}}
+                    {{ form_widget(form.Firstname)}}
+                </div>
+                
+                <div class="input-block">
+                    {{ form_label(form.Birth)}}
+                    {{ form_widget(form.Birth)}}
+                </div>
+
+                <div class="input-block">
+                    {{ form_label(form.email)}}
+                    {{ form_widget(form.email)}}
+                </div>
+
+                <div class="input-block">
+                    {{ form_label(form.Sexe)}}
+                    {{ form_widget(form.Sexe)}}
+                </div>
+
+                <div class="input-block">
+                    {{ form_label(form.Country)}}
+                    {{ form_widget(form.Country)}}
+                </div>
+                
+                <div class="input-block">
+                    {{ form_label(form.Job)}}
+                    {{ form_widget(form.Job)}}
+                </div>
+                {{ form_label(form.save)}}
+                {{ form_widget(form.save)}}
+                {{ form_end(form) }}
+            </div>
+        </div>
+    {% endblock %}

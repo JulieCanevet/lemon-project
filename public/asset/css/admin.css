@@ -1,0 +1,24 @@
+.title{
+    color: #333333;
+    text-align: left;
+}
+.main-sidebar{
+    background-color:#ededed
+}
+@media (min-width: 768px){
+    .content, .content-header{
+        margin: auto;
+    }
+    .content-header{
+        text-align: center;
+    }
+}
+body.edit textarea, body.new textarea{
+    min-height: auto;
+    height: auto;
+}
+@media (min-width: 1860px){
+    .content, .content-header{
+        width: 50%;
+    }
+}

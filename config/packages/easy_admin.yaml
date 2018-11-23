@@ -1,0 +1,37 @@
+# config/packages/easy_admin.yaml
+easy_admin:
+    formats:
+        date: 'd/m/Y'
+    design:
+        brand_color: '#a7cd15'
+        assets:
+            css:
+                - 'asset/css/admin.css'
+    entities:
+        User:
+            class: App\Entity\User
+            form:
+                fields:
+                    - { property: 'name', label: 'Nom', type_options: {required: true}}
+                    - { property: 'firstname', label: 'Prénom', type_options: {required: true}}
+                    - { property: 'birth', label: 'Anniversaire', type: 'birthday', type_options: {format: "d M y", required: true}}
+                    - { property: 'email', label: Email', type_options: {required: true}}
+                    - { property: 'sexe', type: choice, type_options: { multiple: false, expanded: true, choices: {'Femme':'femme', 'Homme':'homme'}, required: true } }
+                    - { property: 'country', label: 'Pays', type: country, type_options: {required: true}}
+            edit:
+                title:  'Modifier les informations de l''utilisateur'
+            list:
+                title: 'Liste des utilisateurs'
+                fields:
+                    - { property: 'Country', label: 'Pays' }
+                    - { property: 'Name', label: 'Nom' }
+                    - { property: 'Firstname', label: 'Prénom' }
+                    - { property: 'email', label: 'Email' }
+                    - { property: 'Sexe', label: 'Civilité' }
+                    - { property: 'Dob', label: 'Anniversaire' } 
+                    - 'id'
+        Admin:
+            class: App\Entity\Admin
+            edit:
+                title:  'Modifier les informations de l''administrateur'
+    site_name: 'Lemon Interactive Admin'
