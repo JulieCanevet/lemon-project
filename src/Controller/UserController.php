@@ -27,7 +27,7 @@ class UserController extends AbstractController
     /**
      * Matches /user/new exactly
      *
-     * @Route("/user/create", name="create_user")
+     * @Route("/", name="create_user")
      */
     public function create(Request $request)
     {

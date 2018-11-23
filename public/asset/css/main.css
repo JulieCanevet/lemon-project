@@ -63,7 +63,7 @@ label{
     margin-bottom: .3rem;
     color: #282828;
 }
-button{
+button, a{
     padding: .5rem 1rem;
     border-radius: 4px;
     background-color: #a7cd15;
@@ -73,8 +73,9 @@ button{
     font-size: 16px;
     color: white;
     font-weight: 700;
+    text-decoration: none;
 }
-button:hover{
+button:hover, a:hover{
     background-color: #7c9811;
     border-color: #7c9811;
     cursor: pointer;
