@@ -10,11 +10,11 @@
 
             <form action="{{ path('login') }}" method="post">
                 <div class="input-block">
-                    <label for="username">Username:</label>
+                    <label for="username">Utilisateur</label>
                     <input type="text" id="username" name="_username" value="{{ last_username }}" />
                 </div>
                 <div class="input-block">
-                    <label for="password">Password:</label>
+                    <label for="password">Mot de passe</label>
                     <input type="password" id="password" name="_password" />
                 </div>
                 {#
@@ -23,7 +23,7 @@
                     <input type="hidden" name="_target_path" value="/account" />
                 #}
 
-                <button type="submit">login</button>
+                <button type="submit">Se connecter</button>
             </form>
         </div>
     </div>
